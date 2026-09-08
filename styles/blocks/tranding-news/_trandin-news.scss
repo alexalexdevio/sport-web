@@ -1,0 +1,35 @@
+@use "./../../helpers" as *;
+
+.tranding-news {
+  padding-block: rem(40);
+  &__body {
+    background-color: var(--color-gray-10);
+    border-radius: rem(6);
+    border-color: var(--color-gray-20);
+    padding: 0;
+
+    .col-2 {
+      @include tablet {
+        column-gap: rem(15);
+      }
+
+      &__fixed {
+        @include tablet {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__list {
+    padding: rem(29) 0 rem(36) rem(36);
+
+    @include tablet {
+      padding: rem(29) rem(36) rem(36) rem(36);
+    }
+  }
+}

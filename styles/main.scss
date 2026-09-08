@@ -1,0 +1,26 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/button';
+@use 'blocks/icon';
+@use 'blocks/logo';
+@use 'blocks/header';
+@use 'blocks/bage';
+@use 'blocks/slider';
+
+@use 'blocks/hero' as *;
+
+@use 'blocks/category' as *;
+
+@use 'blocks/tranding-news' as *;
+
+@use 'blocks/news' as *;
+
+@use 'blocks/posts' as *;
+
+@use 'blocks/soc1als';
+@use 'blocks/footer';
+

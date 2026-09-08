@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+
+  &__track {
+    display: flex;
+    transition: transform 0.8s ease;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}

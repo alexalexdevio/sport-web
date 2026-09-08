@@ -1,0 +1,76 @@
+@use './../../helpers' as *;
+
+.news-item {
+  display: grid;
+  grid-template-columns: rem(234) 1fr;
+  column-gap: rem(20);
+  padding-block: rem(20);
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    column-gap: rem(10);
+  }
+
+  &__image {
+    img {
+      width: fluid(234, 200);
+      border-radius: rem(6);
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+
+  &__overview {
+    width: fluid(240, 200);
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: var(--color-gray-20);
+      width: fluid(240, 200);
+      height: rem(1);
+
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &:nth-child(2) &__overview::before {
+    display: none;
+  }
+
+  &:last-child {
+    padding-block: rem(20) 0;
+  }
+
+  &__tag {
+    font-size: rem(10);
+    color: var(--color-dark);
+    opacity: 0.6;
+
+    @include tablet {
+      padding-top: rem(10);
+    }
+  }
+
+  &__link {
+    padding-block: rem(4) rem(10);
+    font-weight: 500;
+  }
+
+  &__description {
+    @include fluid-text(12, 12);
+    @include line-clamp(3);
+
+    color: var(--color-gray-40);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+}

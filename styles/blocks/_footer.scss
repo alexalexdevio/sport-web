@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.footer {
+  padding-block: rem(15);
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: rem(20);
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

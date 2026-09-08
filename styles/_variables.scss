@@ -1,0 +1,30 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #f9fafc;
+  --color-white: #ffffff;
+  --color-dark: #262626;
+  --color-gray-10: #ebeef3;
+  --color-gray-15: #e1e8f0;
+  --color-gray-20: #b8c2ce;
+  --color-gray-30: #bab8b8;
+  --color-gray-40: #696868;
+
+  --gradient: 
+    linear-gradient(45deg, var(--color-dark-15) 64%, var(--color-accent) 136%);
+
+  --border: #{rem(1)} solid var(--color-dark-15);
+
+  --font-family-base: 'Archivo', sans-serif;
+
+  --container-width: #{rem(1280)}; // scss плохо работает с функциями в переменных, поэтому добавляем #{} и вставляем нащу функцию с значениями
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}
+
+

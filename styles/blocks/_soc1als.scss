@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.soc1als {
+  display: inline-flex;
+  justify-content: center;
+  column-gap: rem(20);
+
+  &__link {
+    @include square(rem(50));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-dark);
+    border-radius: rem(4);
+
+    @include hover {
+      background-color: var(--color-light);
+      box-shadow: 0 rem(1) rem(10) rgba(0,0,0,0.2);
+
+      svg {
+        path {
+          fill: var(--color-dark);
+        }
+      }
+    }
+
+    svg {
+
+      path {
+        fill: var(--color-light);
+      }
+
+    }
+  }
+}

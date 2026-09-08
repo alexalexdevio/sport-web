@@ -1,0 +1,69 @@
+@use "./../../helpers" as *;
+
+.tranding-slider {
+  padding-block: rem(40);
+  &__body {
+    background-color: var(--color-gray-10);
+    border-radius: rem(6);
+    padding: 0;
+
+    .slider {
+      &__post {
+        img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 1168 / 518;
+          object-fit: cover;
+        }
+      }
+      &__navigation {
+        display: flex;
+        flex-direction: row;
+        justify-self: end;
+        column-gap: rem(15);
+        padding: rem(20);
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0;
+          width: rem(45);
+          height: rem(40);
+        }
+      }
+    }
+
+    .post {
+      &__overview {
+        @include mobile {
+          padding: rem(15) rem(10);
+        }
+      }
+
+      &__tag {
+        @include mobile {
+          @include fluid-text(14, 10);
+        }
+      }
+
+      &__link {
+        &-title {
+          @include line-clamp(2);
+
+          @include mobile-s {
+            @include line-clamp(1);
+          }
+        }
+
+        &-description {
+          @include line-clamp(2);
+
+          @include mobile-s {
+            @include line-clamp(1);
+          }
+        }
+      }
+    }
+  }
+}

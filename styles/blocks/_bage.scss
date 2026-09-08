@@ -1,0 +1,44 @@
+@use './../helpers' as *;
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray-15);
+  height: rem(34);
+  padding: rem(4) rem(10);
+  width: fit-content;
+  border-radius: rem(4);
+  font-weight: 500;
+  color: var(--color-gray-20);
+  letter-spacing: 1px;
+
+  &-category {
+    @include fluid-text(37, 18);
+
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    width: 100%;
+    height: fit-content;
+    min-height: rem(116);
+    text-align: center;
+      background: linear-gradient(to bottom,
+          #2b2d33 0%,
+          #6b6f76 60%,
+          #d8d9db 90%,
+          #f5f5f6 100%) var(--color-gray-15);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  &__post {
+    height: fit-content;
+    background-color: transparent;
+    border: rem(1) solid var(--color-light);
+    color: var(--color-light);
+    justify-self: start;
+  }
+}

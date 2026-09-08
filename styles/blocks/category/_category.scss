@@ -1,0 +1,61 @@
+@use './../../helpers' as *;
+
+.category {
+  padding: rem(80) 0 rem(40) 0;
+  &__title {
+    padding-bottom: rem(16);
+    font-weight: 500;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(30);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(30);
+    }
+  }
+
+  &__link {
+    background-color: var(--color-gray-15);
+    border-radius: rem(4);
+
+    @include hover {
+      background-color: var(--color-dark);
+      box-shadow: 0 0 1rem 0 var(--color-gray-20);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    img {
+      width: 100%;
+    }
+
+    &:nth-child(2n) {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-child(2) img {
+      position: relative;
+      top: rem(-50);
+      width: 100%;
+
+      @include tablet {
+        top: rem(-40);
+      }
+
+    @include mobile {
+        top: 0;
+    }
+    }
+
+    @include mobile {
+      row-gap: rem(30);
+    }
+  }
+}

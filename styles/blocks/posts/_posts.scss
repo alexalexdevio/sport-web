@@ -1,0 +1,79 @@
+@use "../../helpers" as *;
+
+.post {
+  position: relative;
+
+  img {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: rem(6);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.35) 40%,
+        rgba(0, 0, 0, 0) 75%);
+    border-radius: rem(6);
+  }
+
+  &__overview {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: rem(36) rem(30);
+  }
+
+  &__tag {
+    margin-top: auto;
+    color: var(--color-light);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      color: var(--color-light);
+      font-weight: 800;
+      line-height: 1.7;
+    }
+
+    &-title {
+      color: var(--color-light);
+      font-weight: 800;
+      line-height: 1.7;
+      letter-spacing: 1.3px;
+      @include fluid-text(36, 14);
+    }
+
+    &-description {
+      color: var(--color-light);
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 1.3px;
+
+      @include fluid-text(20, 10);
+    }
+
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+}
