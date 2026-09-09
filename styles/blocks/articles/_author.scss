@@ -1,0 +1,13 @@
+@use '../../helpers' as *;
+
+.author {
+  &__avatar {
+    width: rem(44);
+    aspect-ratio: 44/44;
+  }
+  &__name {
+    @include fluid-text(14, 14);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+}

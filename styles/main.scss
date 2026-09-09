@@ -27,6 +27,9 @@
 
 @use 'blocks/ranking/ranking' as *;
 
+@use 'blocks/blog-posts' as *;
+@use 'blocks/articles' as *;
+
 @use 'blocks/soc1als';
 @use 'blocks/footer';
 
