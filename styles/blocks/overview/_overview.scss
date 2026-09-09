@@ -1,0 +1,12 @@
+@use '../../helpers' as *;
+
+.overview {
+  padding-block: rem(40);
+  &__body {
+    grid-template-columns: rem(545) 1fr;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

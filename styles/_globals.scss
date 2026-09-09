@@ -126,8 +126,17 @@ button {
     grid-template-columns: repeat(2, 1fr);
     column-gap: rem(30);
 
+    @include tablet {
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+    }
+
     &__fixed {
       grid-template-columns: auto minmax(0, rem(570));
+
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
