@@ -1,0 +1,92 @@
+@use '../../helpers' as *;
+
+.ranking {
+  min-width: 0;
+
+  &__title {
+    margin-bottom: rem(16);
+  }
+
+  &__table {
+    background-color: var(--color-gray-10);
+    border-radius: rem(6);
+    padding: rem(10);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include hover {
+      box-shadow: rem(1) 0 rem(5) rgba(0,0,0,0.1);
+    }
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: minmax(160px, 3fr) repeat(7, minmax(48px, 1fr));
+    align-items: center;
+    column-gap: rem(24);
+    border-bottom: 1px solid var(--color-gray-20);
+    padding-block: rem(10);
+
+    @include tablet {
+      grid-template-columns: minmax(160px, 2fr) repeat(7, minmax(40px, 1fr));
+      column-gap: rem(16);
+      min-width: max-content;
+    }
+
+    @include mobile {
+      grid-template-columns: minmax(140px, 2fr) repeat(7, minmax(32px, 1fr));
+      column-gap: rem(10);
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &--head {
+      padding-top: 0;
+      border-bottom: none; 
+      font-weight: 700;
+    }
+
+  }
+
+  &__cell {
+    @include fluid-text(16, 14);
+
+    text-align: center;
+
+    &--club {
+      display: flex;
+      align-items: center;
+      column-gap: rem(16);
+      justify-self: start;  
+      font-weight: 700;
+    }
+  }
+
+  &__row--head &__cell--club {
+    font-weight: 500;
+  }
+
+  &__position {
+    @include fluid-text(13, 10);
+
+    width: rem(16);
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+
+  &__logo {
+    width: rem(24);
+    height: rem(24);
+    object-fit: contain;
+  }
+
+  &__name {
+    @include fluid-text(13, 10);
+
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
+

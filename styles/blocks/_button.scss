@@ -82,4 +82,11 @@
     }
   }
 
+  &__recent {
+    height: fit-content;
+    min-height: fit-content;
+    padding: rem(3) rem(7);
+    border-radius: rem(3);
+  }
+
 }

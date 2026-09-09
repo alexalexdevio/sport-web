@@ -21,6 +21,12 @@
 
 @use 'blocks/posts' as *;
 
+@use 'blocks/overview' as *;
+
+@use 'blocks/recent-news' as *;
+
+@use 'blocks/ranking/ranking' as *;
+
 @use 'blocks/soc1als';
 @use 'blocks/footer';
 
