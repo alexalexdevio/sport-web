@@ -1,0 +1,62 @@
+@use '../../helpers' as *;
+
+.articles {
+  &__post {
+    display: flex;
+    flex-direction: column;
+    &-image {
+      position: relative;
+
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 370/248;
+      }
+
+    }
+
+    &-badge {
+      position: absolute;
+      top: rem(14);
+      right: rem(14);
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: rem(16);
+    padding-block: rem(20);
+  }
+
+  &__date {
+    @include fluid-text(14, 14);
+
+    color: var(--color-dark);
+    opacity: 0.6;
+  }
+
+  &__link {
+    @include line-clamp(2);
+
+    margin-block: rem(15);
+    h3 {
+      @include fluid-text(22, 16);
+
+      font-weight: 500;
+      color: var(--color-dark);
+    }
+
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__description {
+    @include fluid-text(16, 14);
+    @include line-clamp(3);
+
+    color: var(--color-gray-40);
+  }
+}

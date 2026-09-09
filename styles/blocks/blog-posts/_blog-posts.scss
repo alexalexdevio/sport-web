@@ -1,0 +1,21 @@
+@use '../../helpers' as *;
+
+.blog {
+  padding-block: rem(40);
+
+  &__title {
+    padding-bottom: rem(16);
+  }
+  &__articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(30);
+    justify-self: center;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+    }
+
+  }
+}
