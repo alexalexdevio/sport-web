@@ -28,6 +28,7 @@
     @include fluid-text(60, 24);
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: rem(570);
     text-transform: uppercase;
@@ -56,6 +57,31 @@
     @include mobile-s {
       width: 100%;
     }
+  }
+
+  // Кожна літера, розбита GSAP SplitText, має явно успадкувати градієнтний
+  // background-clip з батьківського заголовка — інакше по замовчуванню
+  // <span>-и SplitText отримають прозорий текст без фону і стануть невидимими.
+  // Кожен рядок заголовка ("Newsletter" / "Subscription") — окремий flex-item
+  // на всю ширину, тому вони завжди йдуть у два рядки незалежно від ширини
+  // контейнера чи шрифту (надійніше за <br>, який flex-контейнер ігнорує).
+  &__title-line {
+    flex: 0 0 100%;
+    width: 100%;
+    background: inherit;
+    background-clip: inherit;
+    -webkit-background-clip: inherit;
+    -webkit-text-fill-color: inherit;
+    color: inherit;
+  }
+
+  &__char {
+    display: inline-block;
+    background: inherit;
+    background-clip: inherit;
+    -webkit-background-clip: inherit;
+    -webkit-text-fill-color: inherit;
+    color: inherit;
   }
 
   &__form {
@@ -112,6 +138,7 @@
     height: 100%;
     aspect-ratio: 508/385;
     object-fit: cover;
+    will-change: transform;
 
     @include tablet {
       height: auto;
