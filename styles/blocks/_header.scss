@@ -85,7 +85,7 @@
       font-weight: 700;
 
       &:not(.is-active) {
-        opacity: 0.6;
+        color: var(--color-gray-40);
         font-weight: 400;
       }
     }
