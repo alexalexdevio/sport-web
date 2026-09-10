@@ -9,10 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie-edge" />
   <title>Sport News</title>
   <link rel="stylesheet" href="./styles/main.css" />
-  <script src="./scripts/vendor/gsap.min.js" defer></script>
-  <script src="./scripts/vendor/ScrollTrigger.min.js" defer></script>
-  <script src="./scripts/vendor/SplitText.min.js" defer></script>
-  <script src="./scripts/vendor/lenis.min.js" defer></script>
+  <link rel="preload" as="image" href="./images/hero/basketball__player-1x.avif" type="image/avif" fetchpriority="high" />
   <script src="./scripts/main.js" type="module" defer></script>
 </head>
 
@@ -75,7 +72,7 @@
           <img src="./images/hero/basketball__player-1x.png" srcset="
               ./images/hero/basketball__player-1x.png,
               ./images/hero/basketball__player-2x.png
-            " alt="" class="hero__player" />
+            " alt="" class="hero__player" width="720" height="580" fetchpriority="high" />
         </picture>
         <div class="hero__title">
           <h1 class="hero__title-text h1" id="hero-title">Top scorer to the final match</h1>

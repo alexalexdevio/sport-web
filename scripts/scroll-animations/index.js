@@ -17,9 +17,6 @@ class ScrollAnimations {
       ".ranking__title",
       ".blog__title",
     ].join(", "),
-    heroTitle: ".hero__title-text",
-    heroPlayer: ".hero__player",
-    heroSubnewsItem: ".subnews__item",
     categoryItem: ".category__item",
     categoryList: ".category__list",
     trendingNewsItem: ".tranding-news__list .news-item",
@@ -48,9 +45,6 @@ class ScrollAnimations {
     if (prefersReducedMotion) return;
 
     this.revealHeadings();
-    this.revealHeroTitle();
-    this.revealHeroPlayer();
-    this.revealHeroSubnews();
     this.revealCategoryItems();
     this.revealTrendingNewsItems();
     this.revealArticles();
@@ -58,53 +52,9 @@ class ScrollAnimations {
     this.revealSubscription();
   };
 
-  // Заголовок hero-секції: легка поява згори вниз, без ефекту "вильоту" —
-  // невеликий зсув (20px) і трохи довша плавна анімація, оскільки заголовок
-  // вже видно одразу при завантаженні сторінки (без ScrollTrigger)
-  revealHeroTitle = () => {
-    const title = document.querySelector(this.selectors.heroTitle);
-    if (!title) return;
-
-    window.gsap.from(title, {
-      y: -20,
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-      delay: 0.1,
-    });
-  };
-
-  // Гравець у hero: заходить збоку (справа) з фейдом, з невеликим
-  // "перельотом" easing'ом (back.out) — наче щойно приземлився в кадр.
-  // Стартує одразу після заголовка (без ScrollTrigger — блок і так на екрані).
-  revealHeroPlayer = () => {
-    const player = document.querySelector(this.selectors.heroPlayer);
-    if (!player) return;
-
-    window.gsap.from(player, {
-      x: 80,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power3.out",
-      delay: 0.3,
-    });
-  };
-
-  // Картки "Today" (subnews) праворуч: піднімаються з фейдом одна за одною,
-  // стартують трохи пізніше за гравця, щоб не заважати одне одному.
-  revealHeroSubnews = () => {
-    const items = document.querySelectorAll(this.selectors.heroSubnewsItem);
-    if (!items.length) return;
-
-    window.gsap.from(items, {
-      y: 30,
-      opacity: 0,
-      duration: 0.7,
-      ease: "power2.out",
-      stagger: 0.15,
-      delay: 0.6,
-    });
-  };
+  // Заголовок hero, гравець і картки "Today" тепер анімуються чистим CSS
+  // (styles/blocks/hero/_hero.scss, _subnews.scss) — вони видимі одразу при
+  // завантаженні сторінки, без очікування GSAP, і не впливають на LCP.
 
   // Category: стагер-поява знизу — кожна картка піднімається з фейдом
   // одна за одною (зліва направо) з невеликою затримкою між ними.
