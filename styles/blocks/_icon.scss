@@ -22,4 +22,10 @@
       background-image: url("../../icons/icon__search-white.svg");
     }
   }
+
+  &--subscription {
+    &::before {
+      background-image: url("../../icons/icon__arrow-white-top.svg");
+    }
+  }
 }
