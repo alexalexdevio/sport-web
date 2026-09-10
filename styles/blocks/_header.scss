@@ -78,6 +78,8 @@
     }
 
     &-link {
+      @include fluid-text(15, 14);
+
       padding: rem(10);
       color: var(--color-dark);
       font-weight: 700;

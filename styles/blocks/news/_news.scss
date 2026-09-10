@@ -12,13 +12,23 @@
   }
 
   &__image {
+    overflow: hidden;
+    border-radius: rem(6);
+
     img {
       width: fluid(234, 200);
       border-radius: rem(6);
+      transition: transform var(--transition-duration);
 
       @include tablet {
         width: 100%;
       }
+    }
+  }
+
+  &:has(.news-item__link:hover) {
+    .news-item__image img {
+      transform: scale(1.1);
     }
   }
 

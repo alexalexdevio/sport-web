@@ -16,11 +16,11 @@
 
     @include mobile {
       grid-template-columns: 1fr;
-      grid-template-areas: 
-        'title title'
-        'description description'
-        'subnews subnews';
-        row-gap: rem(40);
+      grid-template-areas:
+        "title title"
+        "description description"
+        "subnews subnews";
+      row-gap: rem(40);
     }
 
     &::before {
@@ -33,8 +33,7 @@
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image:
-        url("../../../images/hero/basketball__bg.svg");
+      background-image: url("../../../images/hero/basketball__bg.svg");
       position: absolute;
 
       @include mobile {
@@ -55,7 +54,7 @@
 
     @include tablet {
       left: rem(170);
-      height: 82%
+      height: 82%;
     }
 
     @include mobile {
@@ -117,6 +116,10 @@
       @include mobile {
         align-self: center;
       }
+
+      @include hover {
+        box-shadow: 0 rem(20) rem(40) rgba(38, 38, 38, 0.15);
+      }
     }
 
     &-text {
@@ -148,7 +151,6 @@
       align-items: center;
       grid-template-columns: 100%;
     }
-
   }
 
   &__subnews {

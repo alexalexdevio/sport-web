@@ -6,11 +6,14 @@
     flex-direction: column;
     &-image {
       position: relative;
+      border-radius: rem(6);
+      overflow: hidden;
 
       img {
         display: block;
         width: 100%;
         aspect-ratio: 370/248;
+        transition-duration: var(--transition-duration);
       }
 
     }
@@ -19,7 +22,17 @@
       position: absolute;
       top: rem(14);
       right: rem(14);
+      z-index: 1;
     }
+
+    &:has(.articles__link:hover) {
+      .articles__post-image {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
   }
 
   &__author {
