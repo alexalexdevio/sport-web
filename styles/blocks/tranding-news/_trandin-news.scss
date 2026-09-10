@@ -22,6 +22,8 @@
   }
 
   &__title {
+    @include fluid-text(36, 28);
+
     font-weight: 500;
   }
 
