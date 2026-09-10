@@ -9,6 +9,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie-edge" />
   <title>Sport News</title>
   <link rel="stylesheet" href="./styles/main.css" />
+  <script src="./scripts/vendor/gsap.min.js" defer></script>
+  <script src="./scripts/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="./scripts/vendor/SplitText.min.js" defer></script>
+  <script src="./scripts/vendor/lenis.min.js" defer></script>
   <script src="./scripts/main.js" type="module" defer></script>
 </head>
 
@@ -23,22 +27,19 @@
         <nav class="header__menu" aria-label="Main navigation">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a href="/" class="header__menu-link is-active">Home</a>
+              <a href="#" class="header__menu-link is-active">Home</a>
             </li>
             <li class="header__menu-item">
-              <a href="/" class="header__menu-link">Category</a>
+              <a href="#category-title" class="header__menu-link">Category</a>
             </li>
             <li class="header__menu-item">
-              <a href="/" class="header__menu-link">Trending News</a>
+              <a href="#tranding-news-title" class="header__menu-link">Trending News</a>
             </li>
             <li class="header__menu-item">
-              <a href="/" class="header__menu-link">Recent News</a>
+              <a href="#recent-news-title" class="header__menu-link">Recent News</a>
             </li>
             <li class="header__menu-item">
-              <a href="/" class="header__menu-link">Clubs Ranking</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="/" class="header__menu-link">Sports Article</a>
+              <a href="#sports-articles" class="header__menu-link">Sports Article</a>
             </li>
           </ul>
         </nav>
@@ -77,7 +78,7 @@
             " alt="" class="hero__player" />
         </picture>
         <div class="hero__title">
-          <h1 class="hero__title-text h1" id="hearo-title">Top scorer to the final match</h1>
+          <h1 class="hero__title-text h1" id="hero-title">Top scorer to the final match</h1>
         </div>
         <div class="hero__description">
           <p class="hero__description-text text">
@@ -689,7 +690,8 @@
     <section class="subscription" aria-labelledby="subscription-title">
         <div class="subscription__body container">
           <h2 class="subscription__title" id="subscription__title">
-            Newsletter Subscription
+            <span class="subscription__title-line">Newsletter</span>
+            <span class="subscription__title-line">Subscription</span>
           </h2>
           <form class="subscription__form">
             <label for="subscription__email" class="visually-hidden">Email</label>

@@ -119,6 +119,11 @@ html {
     Плавный скролл
    */
   scroll-behavior: smooth;
+  /**
+    Відступ під час скролу до якоря,
+    щоб заголовок секції не ховався під sticky header
+   */
+  scroll-padding-top: 6.25rem;
 }
 
 body {

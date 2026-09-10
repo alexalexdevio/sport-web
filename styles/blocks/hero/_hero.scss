@@ -35,6 +35,8 @@
       background-repeat: no-repeat;
       background-image: url("../../../images/hero/basketball__bg.svg");
       position: absolute;
+      transform: translateY(var(--hero-ball-parallax, 0px));
+      will-change: transform;
 
       @include mobile {
         --size: #{rem(300)};
