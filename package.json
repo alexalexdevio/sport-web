@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass-watch": "sass --watch .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-watch": "sass --watch . --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "images": "node scripts/optimize-images.js",
+    "images:watch": "node scripts/optimize-images.js --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.104.0"
+    "sass": "^1.104.0",
+    "sharp": "^0.33.0",
+    "chokidar": "^3.6.0"
   }
 }

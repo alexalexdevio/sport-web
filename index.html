@@ -62,10 +62,20 @@
     <!--START: Hero section-->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__body container">
-        <img src="./images/hero/basketball__player-1x.png" srcset="
+        <picture>
+          <source type="image/avif" srcset="
+              ./images/hero/basketball__player-1x.avif,
+              ./images/hero/basketball__player-2x.avif
+            " />
+          <source type="image/webp" srcset="
+              ./images/hero/basketball__player-1x.webp,
+              ./images/hero/basketball__player-2x.webp
+            " />
+          <img src="./images/hero/basketball__player-1x.png" srcset="
               ./images/hero/basketball__player-1x.png,
               ./images/hero/basketball__player-2x.png
             " alt="" class="hero__player" />
+        </picture>
         <div class="hero__title">
           <h1 class="hero__title-text h1" id="hearo-title">Top scorer to the final match</h1>
         </div>
@@ -87,8 +97,12 @@
               <li class="subnews__item">
                 <a href="/" class="subnews__link">
                   <div class="subnews__link-image">
+                    <picture>
+                    <source type="image/avif" srcset="./images/hero-sub-news/image__sub-one.avif" />
+                    <source type="image/webp" srcset="./images/hero-sub-news/image__sub-one.webp" />
                     <img src="./images/hero-sub-news/image__sub-one.png" alt="Subnews image one" width="270"
                       height="233" />
+                  </picture>
                   </div>
                   <div class="subnews__link-description">
                     <span class="subnews__item-date">Race98 - <time datetime="2023-06-03">03 June 2023</time></span>
@@ -101,8 +115,12 @@
               <li class="subnews__item">
                 <a href="/" class="subnews__link">
                   <div class="subnews__link-image">
+                    <picture>
+                    <source type="image/avif" srcset="./images/hero-sub-news/image__sub-second.avif" />
+                    <source type="image/webp" srcset="./images/hero-sub-news/image__sub-second.webp" />
                     <img src="./images/hero-sub-news/image__sub-second.png" alt="Subnews image second" width="270"
                       height="233" />
+                  </picture>
                   </div>
                   <div class="subnews__link-description">
                     <span class="subnews__item-date">INDYCAR - <time datetime="2023-06-03">03 June 2023</time></span>
@@ -128,29 +146,45 @@
             <a href="/" class="category__link">
               <span class="badge badge-category"> football </span>
             </a>
-            <img src="./images/category/football.jpg" alt="Category: Football" title="Category: Football" width="270"
+            <picture>
+              <source type="image/avif" srcset="./images/category/football.avif" />
+              <source type="image/webp" srcset="./images/category/football.webp" />
+              <img src="./images/category/football.jpg" alt="Category: Football" title="Category: Football" width="270"
               height="288" loading="lazy" />
+            </picture>
           </li>
           <li class="category__item">
             <a href="/" class="category__link">
               <span class="badge badge-category"> basketball </span>
             </a>
-            <img src="./images/category/basketball.png" alt="Category: Basketball" title="Category: Basketball" width="270"
+            <picture>
+              <source type="image/avif" srcset="./images/category/basketball.avif" />
+              <source type="image/webp" srcset="./images/category/basketball.webp" />
+              <img src="./images/category/basketball.png" alt="Category: Basketball" title="Category: Basketball" width="270"
               height="235" loading="lazy" />
+            </picture>
           </li>
           <li class="category__item">
             <a href="/" class="category__link">
               <span class="badge badge-category"> car sport </span>
             </a>
-            <img src="./images/category/car_sport.png" alt="Category: Car sport" title="Category: Car sport" width="270"
+            <picture>
+              <source type="image/avif" srcset="./images/category/car_sport.avif" />
+              <source type="image/webp" srcset="./images/category/car_sport.webp" />
+              <img src="./images/category/car_sport.png" alt="Category: Car sport" title="Category: Car sport" width="270"
               height="288" loading="lazy" />
+            </picture>
           </li>
           <li class="category__item">
             <a href="/" class="category__link">
               <span class="badge badge-category"> table tennis </span>
             </a>
-            <img src="./images/category/tenis.jpg" alt="Category: Table tennis" title="Category: Table tennis" width="270"
+            <picture>
+              <source type="image/avif" srcset="./images/category/tenis.avif" />
+              <source type="image/webp" srcset="./images/category/tenis.webp" />
+              <img src="./images/category/tenis.jpg" alt="Category: Table tennis" title="Category: Table tennis" width="270"
               height="288" loading="lazy" />
+            </picture>
           </li>
         </ul>
       </div>
@@ -167,9 +201,13 @@
             </li>
             <li class="trandint-news__item news-item">
               <div class="news-item__image">
-                <img src="./images/tanding-news/image__post-small-one.jpg" alt="Two jockeys racing horses at Belmont Park"
+                <picture>
+                  <source type="image/avif" srcset="./images/tanding-news/image__post-small-one.avif" />
+                  <source type="image/webp" srcset="./images/tanding-news/image__post-small-one.webp" />
+                  <img src="./images/tanding-news/image__post-small-one.jpg" alt="Two jockeys racing horses at Belmont Park"
                   title="6-Year-Old Horse Dies at Belmont Park After Race Injury" loading="lazy" width="234"
                   height="150" />
+                </picture>
               </div>
               <div class="news-item__overview">
                 <span class="news-item__tag">
@@ -188,9 +226,13 @@
             </li>
             <li class="trandint-news__item news-item">
               <div class="news-item__image">
-                <img src="./images/tanding-news/image__post-small-two.jpg" alt="Cyclist riding on a road during a race"
+                <picture>
+                  <source type="image/avif" srcset="./images/tanding-news/image__post-small-two.avif" />
+                  <source type="image/webp" srcset="./images/tanding-news/image__post-small-two.webp" />
+                  <img src="./images/tanding-news/image__post-small-two.jpg" alt="Cyclist riding on a road during a race"
                   title="Savilia Blunk Embraces Longer Season with World Cup" loading="lazy" width="234"
                   height="150" />
+                </picture>
               </div>
               <div class="news-item__overview">
                 <span class="news-item__tag">
@@ -209,9 +251,13 @@
             </li>
             <li class="trandint-news__item news-item">
               <div class="news-item__image">
-                <img src="./images/tanding-news/image__post-small-three.jpg" alt="Boxing ring lit up before a match"
+                <picture>
+                  <source type="image/avif" srcset="./images/tanding-news/image__post-small-three.avif" />
+                  <source type="image/webp" srcset="./images/tanding-news/image__post-small-three.webp" />
+                  <img src="./images/tanding-news/image__post-small-three.jpg" alt="Boxing ring lit up before a match"
                   title="Ryan Garcia is fighting again, this time on social media" loading="lazy" width="234"
                   height="150" />
+                </picture>
               </div>
               <div class="news-item__overview">
                 <span class="news-item__tag">
@@ -231,8 +277,12 @@
             </li>
           </ul>
           <div class="tranding-news__post post">
-            <img src="./images/tanding-news/image__post-one.jpg" class="post__image" alt="Cyclists competing in a road race"
+            <picture class="post__image">
+              <source type="image/avif" srcset="./images/tanding-news/image__post-one.avif" />
+              <source type="image/webp" srcset="./images/tanding-news/image__post-one.webp" />
+              <img src="./images/tanding-news/image__post-one.jpg" class="post__image" alt="Cyclists competing in a road race"
               title="Discover the member benefits of USA Cycling" width="570" height="609" loading="lazy" />
+            </picture>
             <div class="post__overview">
               <a href="/" alt="" class="badge badge__post"> Cycling </a>
               <span class="post__tag">
@@ -256,8 +306,12 @@
           <div class="slider__track" data-slider-track>
             <div class="slider__slide">
               <div class="slider__post post">
-                <img src="./images/tanding-news/image__post-slider.jpg" class="post__image" alt="Lionel Messi playing for Paris Saint-Germain"
+                <picture class="post__image">
+                  <source type="image/avif" srcset="./images/tanding-news/image__post-slider.avif" />
+                  <source type="image/webp" srcset="./images/tanding-news/image__post-slider.webp" />
+                  <img src="./images/tanding-news/image__post-slider.jpg" class="post__image" alt="Lionel Messi playing for Paris Saint-Germain"
                   title="Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms" width="1168" height="518" loading="lazy" />
+                </picture>
                 <div class="post__overview">
                   <a href="/" alt="" class="badge badge__post"> Football </a>
                   <span class="post__tag">
@@ -280,8 +334,12 @@
             </div>
             <div class="slider__slide">
               <div class="slider__post post">
-                <img src="./images/tanding-news/image__post-slider-second.jpg" class="post__image" alt="Lionel Messi walking off the pitch"
+                <picture class="post__image">
+                  <source type="image/avif" srcset="./images/tanding-news/image__post-slider-second.avif" />
+                  <source type="image/webp" srcset="./images/tanding-news/image__post-slider-second.webp" />
+                  <img src="./images/tanding-news/image__post-slider-second.jpg" class="post__image" alt="Lionel Messi walking off the pitch"
                   title="Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms" width="1168" height="518" loading="lazy" />
+                </picture>
                 <div class="post__overview">
                   <a href="/" alt="" class="badge badge__post"> Football </a>
                   <span class="post__tag">
@@ -333,8 +391,12 @@
           <div class="recent-news__body">
             <div class="recent-news__single single__recent">
               <a href="/" class="single__recent-link">
-                <img src="./images/resent-news/image__one.jpg" alt="Single recent news" class="single__recent-image"
+                <picture class="single__recent-image">
+                  <source type="image/avif" srcset="./images/resent-news/image__one.avif" />
+                  <source type="image/webp" srcset="./images/resent-news/image__one.webp" />
+                  <img src="./images/resent-news/image__one.jpg" alt="Single recent news" class="single__recent-image"
                   width="270" height="300" />
+                </picture>
                 <span class="single__recent-overview">
                   <span class="single__recent-tag">Day 5 Highlights</span>
                   <h4 class="single__recent-title">
@@ -346,8 +408,12 @@
             <ul class="recent-news__list">
               <li class="recent-news__item news-item">
                 <div class="news-item__image">
-                  <img src="./images/resent-news/image__two.jpg" alt="Recent news post: Taekwondo Championships"
+                  <picture>
+                    <source type="image/avif" srcset="./images/resent-news/image__two.avif" />
+                    <source type="image/webp" srcset="./images/resent-news/image__two.webp" />
+                    <img src="./images/resent-news/image__two.jpg" alt="Recent news post: Taekwondo Championships"
                     title="Baku 2023 Taekwondo Championships" loading="lazy" width="70" height="70" />
+                  </picture>
                 </div>
                 <div class="news-item__overview">
                   <span class="news-item__tag">
@@ -362,8 +428,12 @@
               </li>
               <li class="recent-news__item news-item">
                 <div class="news-item__image">
-                  <img src="./images/resent-news/image__three.jpg" alt="Recent news post: Golf Championship"
+                  <picture>
+                    <source type="image/avif" srcset="./images/resent-news/image__three.avif" />
+                    <source type="image/webp" srcset="./images/resent-news/image__three.webp" />
+                    <img src="./images/resent-news/image__three.jpg" alt="Recent news post: Golf Championship"
                     title="Open Championship Royal Liverpool Golf" loading="lazy" width="70" height="70" />
+                  </picture>
                 </div>
                 <div class="news-item__overview">
                   <span class="news-item__tag">
@@ -380,8 +450,12 @@
               </li>
               <li class="recent-news__item news-item">
                 <div class="news-item__image">
-                  <img src="./images/resent-news/image__four.jpg" alt="Recent news post: Cricket Test"
+                  <picture>
+                    <source type="image/avif" srcset="./images/resent-news/image__four.avif" />
+                    <source type="image/webp" srcset="./images/resent-news/image__four.webp" />
+                    <img src="./images/resent-news/image__four.jpg" alt="Recent news post: Cricket Test"
                     title="Ireland Tour of England Test 2023" loading="lazy" width="70" height="70" />
+                  </picture>
                 </div>
                 <div class="news-item__overview">
                   <span class="news-item__tag">
@@ -518,11 +592,19 @@
           <article class="articles__post">
             <div class="articles__post-image">
               <span class="articles__post-badge badge badge__post">Basketball</span>
+              <picture>
+              <source type="image/avif" srcset="./images/articles/article-1.avif" />
+              <source type="image/webp" srcset="./images/articles/article-1.webp" />
               <img src="./images/articles/article-1.jpg" alt="Basketball player performing a strength exercise" width="370" height="248" />
+            </picture>
             </div>
             <div class="articles__author author">
-              <img src="./images/articles/author-1.png" alt="author avatar 1" width="44" height="44"
+              <picture class="author__avatar">
+                <source type="image/avif" srcset="./images/articles/author-1.avif" />
+                <source type="image/webp" srcset="./images/articles/author-1.webp" />
+                <img src="./images/articles/author-1.png" alt="author avatar 1" width="44" height="44"
                 class="author__avatar">
+              </picture>
               <span class="author__name">Jake Will</span>
             </div>
             <div class="articles__overview">
@@ -540,11 +622,19 @@
           <article class="articles__post">
             <div class="articles__post-image">
               <span class="articles__post-badge badge badge__post">Hockey</span>
+              <picture>
+              <source type="image/avif" srcset="./images/articles/article-2.avif" />
+              <source type="image/webp" srcset="./images/articles/article-2.webp" />
               <img src="./images/articles/article-2.jpg" alt="Vegas Golden Knights hockey action" width="370" height="248" />
+            </picture>
             </div>
             <div class="articles__author author">
-              <img src="./images/articles/author-2.png" alt="author avatar 2" width="44" height="44"
+              <picture class="author__avatar">
+                <source type="image/avif" srcset="./images/articles/author-2.avif" />
+                <source type="image/webp" srcset="./images/articles/author-2.webp" />
+                <img src="./images/articles/author-2.png" alt="author avatar 2" width="44" height="44"
                 class="author__avatar">
+              </picture>
               <span class="author__name">Foxi.zacon</span>
             </div>
             <div class="articles__overview">
@@ -562,11 +652,19 @@
           <article class="articles__post">
             <div class="articles__post-image">
               <span class="articles__post-badge badge badge__post">Badminton</span>
+              <picture>
+              <source type="image/avif" srcset="./images/articles/article-3.avif" />
+              <source type="image/webp" srcset="./images/articles/article-3.webp" />
               <img src="./images/articles/article-3.jpg" alt="Outdoor badminton match" width="370" height="248" />
+            </picture>
             </div>
             <div class="articles__author author">
-              <img src="./images/articles/author-3.png" alt="author avatar 3" width="44" height="44"
+              <picture class="author__avatar">
+                <source type="image/avif" srcset="./images/articles/author-3.avif" />
+                <source type="image/webp" srcset="./images/articles/author-3.webp" />
+                <img src="./images/articles/author-3.png" alt="author avatar 3" width="44" height="44"
                 class="author__avatar">
+              </picture>
               <span class="author__name">Bong Lozada</span>
             </div>
             <div class="articles__overview">
@@ -602,7 +700,11 @@
               </button>
             </span>
           </form>
-          <img src="./images/subscription__player-1x.png" class="subscription__image" alt="subscription player" width="508" height="385" loading="lazy" />
+          <picture class="subscription__image">
+            <source type="image/avif" srcset="./images/subscription__player-1x.avif" />
+            <source type="image/webp" srcset="./images/subscription__player-1x.webp" />
+            <img src="./images/subscription__player-1x.png" class="subscription__image" alt="subscription player" width="508" height="385" loading="lazy" />
+          </picture>
         </div>
     </section>
     <!--END: Subscription section-->
