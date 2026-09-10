@@ -4,6 +4,8 @@
   min-width: 0;
 
   &__title {
+    @include fluid-text(36, 28);
+
     margin-bottom: rem(16);
   }
 
