@@ -40,10 +40,12 @@
   &-more {
     &::after {
       background-image: url("../../icons/icon__arrow-white-right.svg");
-  }
-  &--subscription {
-    &::before {
-      background-image: url("../../icons/icon__arrow-white-top.svg");
+    }
+
+    &--subscription {
+      &::before {
+        background-image: url("../../icons/icon__arrow-white-top.svg");
+      }
     }
   }
 }

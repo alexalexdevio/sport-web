@@ -619,7 +619,8 @@ button[aria-label]::before {
 }
 .icon-more::after {
   background-image: url("../../icons/icon__arrow-white-right.svg");
-.icon--subscription::before {
+}
+.icon-more--subscription::before {
   background-image: url("../../icons/icon__arrow-white-top.svg");
 }
 
