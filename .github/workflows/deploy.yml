@@ -15,6 +15,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /var/www/sport-news.alexalexdev.io
+            cd /var/www/sport-web.alexalexdev.io
             git fetch origin main
             git reset --hard origin/main
