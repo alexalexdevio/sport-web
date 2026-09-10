@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, user-scalable=0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="description" content="Sport News — latest sports news, trending stories, results and club rankings across football, basketball, cycling and more." />
   <meta http-equiv="X-UA-Compatible" content="ie-edge" />
   <title>Sport News</title>
   <link rel="stylesheet" href="./styles/main.css" />
@@ -14,12 +15,12 @@
 <body>
   <header class="header" data-js-header>
     <div class="header__body container">
-      <a href="/" class="header__logo logo" title="Home" alt="Home">
+      <a href="/" class="header__logo logo" title="Home" aria-label="Home">
         <img src="./icons/logo.svg" class="logo__image" alt="" width="154" height="42" />
       </a>
 
       <div class="header__overlay" data-js-header-overlay>
-        <nav class="header__menu">
+        <nav class="header__menu" aria-label="Main navigation">
           <ul class="header__menu-list">
             <li class="header__menu-item">
               <a href="/" class="header__menu-link is-active">Home</a>
@@ -66,7 +67,7 @@
               ./images/hero/basketball__player-2x.png
             " alt="" class="hero__player" />
         <div class="hero__title">
-          <h1 class="hero__title-text h1">Top scorer to the final match</h1>
+          <h1 class="hero__title-text h1" id="hearo-title">Top scorer to the final match</h1>
         </div>
         <div class="hero__description">
           <p class="hero__description-text text">
@@ -90,7 +91,7 @@
                       height="233" />
                   </div>
                   <div class="subnews__link-description">
-                    <span class="subnews__item-date">Race98 - 03 June 2023</span>
+                    <span class="subnews__item-date">Race98 - <time datetime="2023-06-03">03 June 2023</time></span>
                     <p class="subnews__item-title h4">
                       Ethiopian runners took the top four spots.
                     </p>
@@ -104,7 +105,7 @@
                       height="233" />
                   </div>
                   <div class="subnews__link-description">
-                    <span class="subnews__item-date">INDYCAR - 03 June 2023</span>
+                    <span class="subnews__item-date">INDYCAR - <time datetime="2023-06-03">03 June 2023</time></span>
                     <p class="subnews__item-title h4">
                       IndyCar Detroit: Dixon quickest in second practice
                     </p>
@@ -119,36 +120,36 @@
     <!--START: Hero section-->
 
     <!--START: Category section-->
-    <section class="category">
+    <section class="category" aria-labelledby="category-title">
       <div class="category__body container">
-        <h5 class="category__title">Category</h5>
+        <h2 class="category__title h5" id="category-title">Category</h2>
         <ul class="category__list">
           <li class="category__item">
             <a href="/" class="category__link">
               <span class="badge badge-category"> football </span>
             </a>
-            <img src="./images/category/football.jpg" alt="Category football" title="Category football" width="270"
+            <img src="./images/category/football.jpg" alt="Category: Football" title="Category: Football" width="270"
               height="288" loading="lazy" />
           </li>
           <li class="category__item">
             <a href="/" class="category__link">
-              <span class="badge badge-category"> bascket ball </span>
+              <span class="badge badge-category"> basketball </span>
             </a>
-            <img src="./images/category/basketball.png" alt="Category football" title="Category football" width="270"
+            <img src="./images/category/basketball.png" alt="Category: Basketball" title="Category: Basketball" width="270"
               height="235" loading="lazy" />
           </li>
           <li class="category__item">
             <a href="/" class="category__link">
               <span class="badge badge-category"> car sport </span>
             </a>
-            <img src="./images/category/car_sport.png" alt="Category football" title="Category football" width="270"
+            <img src="./images/category/car_sport.png" alt="Category: Car sport" title="Category: Car sport" width="270"
               height="288" loading="lazy" />
           </li>
           <li class="category__item">
             <a href="/" class="category__link">
-              <span class="badge badge-category"> tenis table </span>
+              <span class="badge badge-category"> table tennis </span>
             </a>
-            <img src="./images/category/tenis.jpg" alt="Category football" title="Category football" width="270"
+            <img src="./images/category/tenis.jpg" alt="Category: Table tennis" title="Category: Table tennis" width="270"
               height="288" loading="lazy" />
           </li>
         </ul>
@@ -157,16 +158,16 @@
     <!--END: Category section-->
 
     <!--START: Tranding news-->
-    <section class="tranding-news">
+    <section class="tranding-news" aria-labelledby="tranding-news-title">
       <div class="tranding-news__body container">
         <div class="col-2 col-2__fixed">
           <ul class="tranding-news__list">
             <li class="tranding__news__item">
-              <h5 class="tranding-news__title">Trending News</h5>
+              <h2 class="tranding-news__title h5" id="tranding-news-title">Trending News</h2>
             </li>
             <li class="trandint-news__item news-item">
               <div class="news-item__image">
-                <img src="./images/tanding-news/image__post-small-one.jpg" alt="Small post image"
+                <img src="./images/tanding-news/image__post-small-one.jpg" alt="Two jockeys racing horses at Belmont Park"
                   title="6-Year-Old Horse Dies at Belmont Park After Race Injury" loading="lazy" width="234"
                   height="150" />
               </div>
@@ -174,10 +175,10 @@
                 <span class="news-item__tag">
                   <a href="/" alt="Author" class="news-item__author">Race98
                   </a>
-                  - 03 June 2023
+                  - <time datetime="2023-06-03">03 June 2023</time>
                 </span>
-                <a href="/" class="news-item__link h3">
-                  6-Year-Old Horse Dies at Belmont Park After Race Injury
+                <a href="/" class="news-item__link">
+                  <h3 class="h3">6-Year-Old Horse Dies at Belmont Park After Race Injury</h3>
                 </a>
                 <p class="news-item__description">
                   NEW YORK—A 6-year-old horse died after being injured in a
@@ -187,18 +188,18 @@
             </li>
             <li class="trandint-news__item news-item">
               <div class="news-item__image">
-                <img src="./images/tanding-news/image__post-small-two.jpg" alt="Small post image"
-                  title="6-Year-Old Horse Dies at Belmont Park After Race Injury" loading="lazy" width="234"
+                <img src="./images/tanding-news/image__post-small-two.jpg" alt="Cyclist riding on a road during a race"
+                  title="Savilia Blunk Embraces Longer Season with World Cup" loading="lazy" width="234"
                   height="150" />
               </div>
               <div class="news-item__overview">
                 <span class="news-item__tag">
                   <a href="/" alt="Author" class="news-item__author">Jony.Ls
                   </a>
-                  - 03 June 2023
+                  - <time datetime="2023-06-03">03 June 2023</time>
                 </span>
-                <a href="/" class="news-item__link h3">
-                  Savilia Blunk Embraces Longer Season with World Cup
+                <a href="/" class="news-item__link">
+                  <h3 class="h3">Savilia Blunk Embraces Longer Season with World Cup</h3>
                 </a>
                 <p class="news-item__description">
                   Last year, Savilia Blunk took a more conservative approach
@@ -208,18 +209,18 @@
             </li>
             <li class="trandint-news__item news-item">
               <div class="news-item__image">
-                <img src="./images/tanding-news/image__post-small-three.jpg" alt="Small post image"
-                  title="6-Year-Old Horse Dies at Belmont Park After Race Injury" loading="lazy" width="234"
+                <img src="./images/tanding-news/image__post-small-three.jpg" alt="Boxing ring lit up before a match"
+                  title="Ryan Garcia is fighting again, this time on social media" loading="lazy" width="234"
                   height="150" />
               </div>
               <div class="news-item__overview">
                 <span class="news-item__tag">
                   <a href="/" alt="Author" class="news-item__author">King.F
                   </a>
-                  - 03 June 2023
+                  - <time datetime="2023-06-03">03 June 2023</time>
                 </span>
-                <a href="/" class="news-item__link h3">
-                  Ryan Garcia is fighting again, this time on social media
+                <a href="/" class="news-item__link">
+                  <h3 class="h3">Ryan Garcia is fighting again, this time on social media</h3>
                 </a>
                 <p class="news-item__description">
                   Boxing star Ryan Garcia and his promoter, Hall of Fame
@@ -230,13 +231,13 @@
             </li>
           </ul>
           <div class="tranding-news__post post">
-            <img src="./images/tanding-news/image__post-one.jpg" class="post__image" alt="Post"
-              title="DISCOVER THE MEMBER BENEFITS OF USA CYCLING!" width="570" height="609" loading="lazy" />
+            <img src="./images/tanding-news/image__post-one.jpg" class="post__image" alt="Cyclists competing in a road race"
+              title="Discover the member benefits of USA Cycling" width="570" height="609" loading="lazy" />
             <div class="post__overview">
               <a href="/" alt="" class="badge badge__post"> Cycling </a>
               <span class="post__tag">
                 <a href="/" class="post__author">Debits </a>
-                - 03 June 2023
+                - <time datetime="2023-06-03">03 June 2023</time>
               </span>
               <a href="/" class="post__link">
                 <h2>DISCOVER THE MEMBER BENEFITS OF USA CYCLING!</h2>
@@ -255,13 +256,13 @@
           <div class="slider__track" data-slider-track>
             <div class="slider__slide">
               <div class="slider__post post">
-                <img src="./images/tanding-news/image__post-slider.jpg" class="post__image" alt="Post"
-                  title="DISCOVER THE MEMBER BENEFITS OF USA CYCLING!" width="1168" height="518" loading="lazy" />
+                <img src="./images/tanding-news/image__post-slider.jpg" class="post__image" alt="Lionel Messi playing for Paris Saint-Germain"
+                  title="Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms" width="1168" height="518" loading="lazy" />
                 <div class="post__overview">
                   <a href="/" alt="" class="badge badge__post"> Football </a>
                   <span class="post__tag">
                     <a href="/" class="post__author">Debits </a>
-                    - 03 June 2023
+                    - <time datetime="2023-06-03">03 June 2023</time>
                   </span>
                   <a href="/" class="post__link">
                     <p class="post__link-title h2">
@@ -279,13 +280,13 @@
             </div>
             <div class="slider__slide">
               <div class="slider__post post">
-                <img src="./images/tanding-news/image__post-slider-second.jpg" class="post__image" alt="Post 2"
-                  title="DISCOVER THE MEMBER BENEFITS OF USA CYCLING! 2" width="1168" height="518" loading="lazy" />
+                <img src="./images/tanding-news/image__post-slider-second.jpg" class="post__image" alt="Lionel Messi walking off the pitch"
+                  title="Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms" width="1168" height="518" loading="lazy" />
                 <div class="post__overview">
                   <a href="/" alt="" class="badge badge__post"> Football </a>
                   <span class="post__tag">
                     <a href="/" class="post__author">Debits </a>
-                    - 03 June 2023
+                    - <time datetime="2023-06-03">03 June 2023</time>
                   </span>
                   <a href="/" class="post__link">
                     <p class="post__link-title h2">
@@ -327,8 +328,8 @@
     <!--START: Overview-->
     <section class="overview">
       <div class="overview__body container col-2">
-        <div class="recent-news">
-          <h5 class="recent-news__title">Recent News</h5>
+        <div class="recent-news" aria-labelledby="recent-news-title">
+          <h2 class="recent-news__title h5" id="recent-news-title">Recent News</h2>
           <div class="recent-news__body">
             <div class="recent-news__single single__recent">
               <a href="/" class="single__recent-link">
@@ -345,63 +346,64 @@
             <ul class="recent-news__list">
               <li class="recent-news__item news-item">
                 <div class="news-item__image">
-                  <img src="./images/resent-news/image__two.jpg" alt="Recenet news post 1"
+                  <img src="./images/resent-news/image__two.jpg" alt="Recent news post: Taekwondo Championships"
                     title="Baku 2023 Taekwondo Championships" loading="lazy" width="70" height="70" />
                 </div>
                 <div class="news-item__overview">
                   <span class="news-item__tag">
                     <a href="/" alt="Author" class="news-item__author">#Pollar.87
                     </a>
-                    - 12 June 2023
+                    - <time datetime="2023-06-12">12 June 2023</time>
                   </span>
-                  <a href="/" class="news-item__link h4">
+                  <a href="/" class="news-item__link">
                     <h4>Baku 2023 Taekwondo Championships</h4>
                   </a>
                 </div>
               </li>
               <li class="recent-news__item news-item">
                 <div class="news-item__image">
-                  <img src="./images/resent-news/image__three.jpg" alt="Recenet news post 2"
-                    title="Baku 2023 Taekwondo Championships" loading="lazy" width="70" height="70" />
+                  <img src="./images/resent-news/image__three.jpg" alt="Recent news post: Golf Championship"
+                    title="Open Championship Royal Liverpool Golf" loading="lazy" width="70" height="70" />
                 </div>
                 <div class="news-item__overview">
                   <span class="news-item__tag">
                     <a href="/" alt="Author" class="news-item__author">#Goft.Toni
                     </a>
-                    - 20 June 2023
+                    - <time datetime="2023-06-20">20 June 2023</time>
                   </span>
-                  <a href="/" class="news-item__link h4">
+                  <a href="/" class="news-item__link">
                     <h4>
-                      Open Championship Royal Liverpool Golf Baku 2023
-                      Taekwondo Championships
+                      Open Championship Royal Liverpool Golf
                     </h4>
                   </a>
                 </div>
               </li>
               <li class="recent-news__item news-item">
                 <div class="news-item__image">
-                  <img src="./images/resent-news/image__four.jpg" alt="Recenet news post 3"
+                  <img src="./images/resent-news/image__four.jpg" alt="Recent news post: Cricket Test"
                     title="Ireland Tour of England Test 2023" loading="lazy" width="70" height="70" />
                 </div>
                 <div class="news-item__overview">
                   <span class="news-item__tag">
                     <a href="/" alt="Author" class="news-item__author">#Cricket.Toni
                     </a>
-                    - 27 July 2023
+                    - <time datetime="2023-07-27">27 July 2023</time>
                   </span>
-                  <a href="/" class="news-item__link h4">
+                  <a href="/" class="news-item__link">
                     <h4>Ireland Tour of England Test 2023</h4>
                   </a>
                 </div>
               </li>
               <li class="recent-news__item">
-                <button class="button button__recent">More</button>
+                <button class="button button__recent" type="button">
+                    <span class="recent-news-icon icon icon-more icon-reverse">More</span>
+                  </button>
               </li>
             </ul>
           </div>
         </div>
-        <div class="ranking">
-          <h5 class="ranking__title">Clubs Ranking</h5>
+        <div class="ranking" aria-labelledby="clubs-ranking-title">
+          <h2 class="ranking__title h5" id="clubs-ranking-title">Clubs Ranking</h2>
           <div class="ranking__table">
             <div class="ranking__row ranking__row--head">
               <span class="ranking__cell ranking__cell--club">Club</span>
@@ -509,14 +511,14 @@
     <!--END: Overview section-->
 
     <!--START: Blog posts section-->
-    <section class="blog">
+    <section class="blog" aria-labelledby="sports-articles">
       <div class="blog__body container">
-        <h5 class="blog__title h5">Sports Article</h5>
+        <h2 class="blog__title h5" id="sports-articles">Sports Article</h2>
         <div class="blog__articles articles">
           <article class="articles__post">
             <div class="articles__post-image">
-              <span class="articles__post-badge badge badge__post">Bascketball</span>
-              <img src="./images/articles/article-1.jpg" alt="articles post 1" width="370" height="248" />
+              <span class="articles__post-badge badge badge__post">Basketball</span>
+              <img src="./images/articles/article-1.jpg" alt="Basketball player performing a strength exercise" width="370" height="248" />
             </div>
             <div class="articles__author author">
               <img src="./images/articles/author-1.png" alt="author avatar 1" width="44" height="44"
@@ -524,7 +526,7 @@
               <span class="author__name">Jake Will</span>
             </div>
             <div class="articles__overview">
-              <span class="articles__date">4 June 2023
+              <span class="articles__date"><time datetime="2023-06-04">4 June 2023</time></span>
             </div>
             <a href="/" class="articles__link">
               <h3 class="h3">
@@ -535,10 +537,10 @@
                 This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.
             </p>
           </article>
-          <article class="articless__post">
+          <article class="articles__post">
             <div class="articles__post-image">
-              <span class="articles__post-badge badge badge__post">Hokey</span>
-              <img src="./images/articles/article-2.jpg" alt="articles post 2" width="370" height="248" />
+              <span class="articles__post-badge badge badge__post">Hockey</span>
+              <img src="./images/articles/article-2.jpg" alt="Vegas Golden Knights hockey action" width="370" height="248" />
             </div>
             <div class="articles__author author">
               <img src="./images/articles/author-2.png" alt="author avatar 2" width="44" height="44"
@@ -546,7 +548,7 @@
               <span class="author__name">Foxi.zacon</span>
             </div>
             <div class="articles__overview">
-              <span class="articles__date">03 June 2023
+              <span class="articles__date"><time datetime="2023-06-03">03 June 2023</time></span>
             </div>
             <a href="/" class="articles__link">
               <h3 class="h3">
@@ -557,10 +559,10 @@
                 The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.
             </p>
           </article>
-          <article class="articless__post">
+          <article class="articles__post">
             <div class="articles__post-image">
               <span class="articles__post-badge badge badge__post">Badminton</span>
-              <img src="./images/articles/article-3.jpg" alt="articles post 3" width="370" height="248" />
+              <img src="./images/articles/article-3.jpg" alt="Outdoor badminton match" width="370" height="248" />
             </div>
             <div class="articles__author author">
               <img src="./images/articles/author-3.png" alt="author avatar 3" width="44" height="44"
@@ -568,7 +570,7 @@
               <span class="author__name">Bong Lozada</span>
             </div>
             <div class="articles__overview">
-              <span class="articles__date">01 June 2023
+              <span class="articles__date"><time datetime="2023-06-01">01 June 2023</time></span>
             </div>
             <a href="/" class="articles__link">
               <h3 class="h3">
@@ -622,8 +624,8 @@
         </a>
       </div>
 
-      <div class="footer__copyright">
-        <p>
+      <div class="footer__copyright" aria-labelledby="copyright">
+        <p id="copyright">
           © <time datetime="2026">2026</time> Sport News Template. Code by and GitHub:
           <a href="/" class="devlopment">@alexalexdev</a>
         </p>
