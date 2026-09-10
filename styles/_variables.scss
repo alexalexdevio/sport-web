@@ -16,6 +16,7 @@
   --border: #{rem(1)} solid var(--color-dark-15);
 
   --font-family-base: 'Archivo', sans-serif;
+  --font-family-accent: 'Archivo', sans-serif;
 
   --container-width: #{rem(1280)}; // scss плохо работает с функциями в переменных, поэтому добавляем #{} и вставляем нащу функцию с значениями
   --container-padding-x: #{rem(16)};
