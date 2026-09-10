@@ -1,5 +1,32 @@
 @use "../../helpers" as *;
 
+// Hero entrance animations — pure CSS, no JS/GSAP dependency, so they never
+// block on script download/parse and never gate LCP measurement. GSAP is
+// reserved for below-the-fold scroll-triggered effects only (see main.js).
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .hero {
   &__body {
     display: grid;
@@ -54,6 +81,10 @@
     object-fit: contain;
     pointer-events: none;
 
+    @media (prefers-reduced-motion: no-preference) {
+      animation: hero-fade-in-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+    }
+
     @include tablet {
       left: rem(170);
       height: 82%;
@@ -83,6 +114,10 @@
       text-transform: uppercase;
       font-weight: 800;
       line-height: 1.2;
+
+      @media (prefers-reduced-motion: no-preference) {
+        animation: hero-fade-up 0.8s ease-out both;
+      }
 
       background: linear-gradient(to bottom,
           #2b2d33 0%,
