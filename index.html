@@ -588,8 +588,25 @@
 
 
     <!--START: Subscription section-->
-    <section class="subscription" aria-labelledby="subscription-title"></section>
+    <section class="subscription" aria-labelledby="subscription-title">
+        <div class="subscription__body container">
+          <h2 class="subscription__title" id="subscription__title">
+            Newsletter Subscription
+          </h2>
+          <form class="subscription__form">
+            <label for="subscription__email" class="visually-hidden">Email</label>
+            <span class="subscription__input">
+            <input id="subscription__email" type="email" name="email" value="" placeholder="shovon.khan0099@gmail.com"/>
+            <button class="subscription__button button button__subscription" type="submit">
+                <span class="subscription__icon icon icon--subscription"></span>
+              </button>
+            </span>
+          </form>
+          <img src="./images/subscription__player-1x.png" class="subscription__image" alt="subscription player" width="508" height="385" loading="lazy" />
+        </div>
+    </section>
     <!--END: Subscription section-->
+
   </main>
 
   <footer class="footer">
