@@ -62,8 +62,7 @@
 
   &__tag {
     font-size: rem(10);
-    color: var(--color-dark);
-    opacity: 0.6;
+    color: var(--color-gray-40);
 
     @include tablet {
       padding-top: rem(10);
