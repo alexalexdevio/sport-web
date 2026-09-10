@@ -33,19 +33,19 @@
 
   &--search {
     &::before {
-      background-image: url("../../icons/icon__search-white.svg");
+      background-image: url("../icons/icon__search-white.svg");
     }
   }
 
   &-more {
     &::after {
-      background-image: url("../../icons/icon__arrow-white-right.svg");
+      background-image: url("../icons/icon__arrow-white-right.svg");
     }
   }
 
   &--subscription {
     &::before {
-      background-image: url("../../icons/icon__arrow-white-top.svg");
+      background-image: url("../icons/icon__arrow-white-top.svg");
     }
   }
 }
